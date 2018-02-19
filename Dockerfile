@@ -4,7 +4,7 @@ FROM debian:jessie
 
 ARG DOWNLOAD_URL="https://s3-us-west-2.amazonaws.com/grafana-releases/master/grafana_latest_amd64.deb"
 
-ENV GF_INSTALL_PLUGINS foursquare-clouderamanager-datasource
+#ENV GF_INSTALL_PLUGINS foursquare-clouderamanager-datasource
 
 RUN apt-get update 
 RUN  apt-get -y --no-install-recommends install libfontconfig curl ca-certificates 
@@ -17,7 +17,9 @@ RUN  curl -L https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64 > 
 RUN  chmod +x /usr/sbin/gosu 
 RUN  apt-get autoremove -y 
 RUN  rm -rf /var/lib/apt/lists/*
-   
+RUN ls ./
+RUN ls /
+RUN find / -iname "*run.sh"
 
 VOLUME ["/var/lib/grafana", "/var/log/grafana", "/etc/grafana"]
 
