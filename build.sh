@@ -1,19 +1,21 @@
 #!/bin/bash
 
-_grafana_plugins=$1
-_grafana_tag=$2
-_grafana_version=$3
+#_grafana_plugins=$1
+#_grafana_tag=$2
+#_grafana_version=$3
 
 
 
-if [ ${_grafana_tag} != "" ]; then
-else
+if [ -z "$2" ]; then
 	_grafana_tag="master"
+else
+	_grafana_tag=$2
 fi
 
-if [ ${_grafana_version} != "" ]; then
+if [ -z "$3" ]; then
+	_grafana_version="master"
 else
-	_grafana_version="latest"
+	_grafana_tversion=$3
 fi
 
 
