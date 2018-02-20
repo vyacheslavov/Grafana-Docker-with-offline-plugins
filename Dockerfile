@@ -1,7 +1,7 @@
-FROM grafana/grafana:latest
+FROM grafana/grafana:${GRAFANA_VERSION}
 
 #ARG GRAFANA_VERSION="latest"
-ARG GF_INSTALL_PLUGINS="foursquare-clouderamanager-datasource"
+#ARG GF_INSTALL_PLUGINS="foursquare-clouderamanager-datasource"
 
 
 #ARG DOWNLOAD_URL="https://s3-us-west-2.amazonaws.com/grafana-releases/master/grafana_latest_amd64.deb"
