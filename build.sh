@@ -6,11 +6,11 @@ _grafana_version=$3
 
 
 
-if [ ${_grafana_tag} == "" ]; then
+if [ ${_grafana_tag} = "" ]; then
 	_grafana_tag="master"
 fi
 
-if [ ${_grafana_version} == "" ]; then
+if [ ${_grafana_version} = "" ]; then
 	_grafana_version="latest"
 fi
 
