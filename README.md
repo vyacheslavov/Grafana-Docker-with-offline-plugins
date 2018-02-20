@@ -1,24 +1,10 @@
 # Grafana Docker image
 
-[![CircleCI](https://circleci.com/gh/grafana/grafana-docker.svg?style=svg)](https://circleci.com/gh/grafana/grafana-docker)
+This project builds a Docker image with the latest master build of Grafana and runs predefined container with predefined and dowloaded plugins without accessing the Internet
 
-This project builds a Docker image with the latest master build of Grafana.
+## Building your Grafana image
 
-## Running your Grafana container
-
-Start your container binding the external port `3000`.
-
-```
-docker run -d --name=grafana -p 3000:3000 grafana/grafana
-```
-
-Try it out, default admin user is admin/admin.
-
-In case port 3000 is closed for external clients or you there is no access 
-to the browser - you may test it by issuing:
-  curl -i localhost:3000/login
-Make sure that you are getting "...200 OK" in response.
-After that continue testing by modifying your client request to grafana.
+Edit your 
 
 ## Configuring your Grafana container
 
