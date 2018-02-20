@@ -1,0 +1,28 @@
+    1  docker ps
+    2  docker ps -a
+    3  cd grafana-docker/
+    4  vim run.sh 
+    5  docker image rm  grafana/grafana:master
+    6  docker rm grafana_cont 
+    7  docker image rm  grafana/grafana:master
+    8  docker image rm  grafana/grafana:latest
+    9  docker image ls
+   10  docker image rm -r *
+   11  docker image rm  *
+   12  docker image rm  docker image ls
+   13  docker rm $(docker ps -a -q)
+   14  docker rmi $(docker images -q)
+   15  docker images ls
+   16  bash build.sh 
+   17  docker ps
+   18  docker ps -a
+   19  docker image ls
+   20  docker run -d -p 3000:3000 --name=grafana_cont  -e "GF_INSTALL_PLUGINS=foursquare-clouderamanager-datasource" grafana/grafana:master
+   21  docker exec -it grafana_cont bash
+   22  docker ps -a
+   23  docker exec -it grafana_cont bash grafana-cli plugins ls
+   24  docker ps -a
+   25  docker exec -it grafana_cont bash 
+   26  docker ps -a
+   27  docker ps 
+   28  history > history_for_print.txt
