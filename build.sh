@@ -13,7 +13,7 @@ else
 fi
 
 if [ -z "$3" ]; then
-	_grafana_version="master"
+	_grafana_version="latest"
 else
 	_grafana_tversion=$3
 fi
