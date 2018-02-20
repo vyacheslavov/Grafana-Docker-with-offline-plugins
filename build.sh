@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#_grafana_plugins=$1
+_grafana_plugins=$1
 #_grafana_tag=$2
 #_grafana_version=$3
 
@@ -15,7 +15,7 @@ fi
 if [ -z "$3" ]; then
 	_grafana_version="latest"
 else
-	_grafana_tversion=$3
+	_grafana_version=$3
 fi
 
 
