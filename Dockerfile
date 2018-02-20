@@ -1,5 +1,6 @@
 ARG GRAFANA_VERSION=latest
 FROM grafana/grafana:${GRAFANA_VERSION}
+ARG GRAFANA_VERSION
 
 #ARG GRAFANA_VERSION="latest"
 #ARG GF_INSTALL_PLUGINS="foursquare-clouderamanager-datasource"
