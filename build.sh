@@ -31,7 +31,8 @@ if [ -z "$1" ]; then
 else
 	echo "List of plugins: ${_grafana_plugins}"
 	docker build \
-		--build-arg GRAFANA_VERSION=${_grafana_version} GF_INSTALL_PLUGINS=${_grafana_plugins} \
+		--build-arg GRAFANA_VERSION=${_grafana_version} \
+		--build-arg GF_INSTALL_PLUGINS=${_grafana_plugins} \
 		--tag "grafana/grafana:${_grafana_tag}" \
 		--no-cache=true .
 #	docker tag grafana/grafana:${_grafana_version} grafana/grafana:latest
