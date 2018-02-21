@@ -2,8 +2,8 @@ ARG GRAFANA_VERSION=latest
 FROM grafana/grafana:${GRAFANA_VERSION}
 
 #ARG GRAFANA_VERSION="latest"
-ARG GF_INSTALL_PLUGINS="grafana-cli --pluginsDir "/data/grafana/plugins" plugins install foursquare-clouderamanager-datasource"
-
+#ARG GF_INSTALL_PLUGINS="grafana-cli --pluginsDir "/data/grafana/plugins" plugins install foursquare-clouderamanager-datasource"
+ARG GF_INSTALL_PLUGINS
 
 
 #ARG DOWNLOAD_URL="https://s3-us-west-2.amazonaws.com/grafana-releases/master/grafana_latest_amd64.deb"
