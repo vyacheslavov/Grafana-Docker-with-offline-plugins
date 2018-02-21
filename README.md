@@ -1,10 +1,34 @@
-# Grafana Docker image
+# Grafana Docker Offline Containerization
 
-This project builds a Docker image with the latest master build of Grafana and runs predefined container with predefined and dowloaded plugins without accessing the Internet
+This project builds a Docker Image with Grafana and runs predefined container with predefined and dowloaded Grafana plugins without accessing the Internet.
+
+# Prerequisites
+
+The Dockerfile has to access the given arguments before pulling the Dockerfile from the official repository. This functionality requires Docker Community Edition of the minimum version 17.05.0-ce. Installation guide can be found [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce).
 
 ## Building your Grafana image
 
-Edit your 
+Bash script has 3 input arguments. By default (without any input arguments) the script builds an image with Grafana of the "latest" version, without plugins and with an image tag "master":
+
+```
+bash build.sh
+
+```
+
+The example of input input arguments (Antonios, use this one):
+
+```
+bash build.sh foursquare-clouderamanager-datasource master latest
+
+```
+
+You can define the list of plugins separating them by comma without spaces. For example: 
+
+```
+bash build.sh foursquare-clouderamanager-datasource,grafana-simple-json-datasource master latest
+
+```
+
 
 ## Configuring your Grafana container
 
