@@ -1,6 +1,6 @@
-# Grafana Docker Offline Containerization
+# Grafana Docker with offline plugins
 
-This project builds a Docker Image with Grafana and runs container with predefined and dowloaded Grafana plugins without accessing the Internet.
+This project builds a Docker image with Grafana and runs container with predefined and dowloaded Grafana plugins without accessing the Internet.
 
 ## Prerequisites
 
@@ -58,7 +58,7 @@ docker run \
   -p 3000:3000 \
   --name=grafana \
   --volumes-from grafana-storage \
-  grafana/grafana
+  grafana/grafana:master
 ```
 
 ## Configuring AWS credentials for CloudWatch support
@@ -72,7 +72,7 @@ docker run \
   -e "GF_AWS_default_ACCESS_KEY_ID=YOUR_ACCESS_KEY" \
   -e "GF_AWS_default_SECRET_ACCESS_KEY=YOUR_SECRET_KEY" \
   -e "GF_AWS_default_REGION=us-east-1" \
-  grafana/grafana
+  grafana/grafana:master
 ```
 
 You may also specify multiple profiles to `GF_AWS_PROFILES` (e.g.
