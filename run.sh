@@ -3,9 +3,12 @@
 : "${GF_PATHS_CONFIG:=/etc/grafana/grafana.ini}"
 : "${GF_PATHS_DATA:=/var/lib/grafana}"
 : "${GF_PATHS_LOGS:=/var/log/grafana}"
-#: "${GF_PATHS_PLUGINS:=/var/lib/grafana/plugins}"
-: "${GF_PATHS_PLUGINS=/data/grafana/plugins}"
+: "${GF_PATHS_PLUGINS:=/var/lib/grafana/plugins}"
+#: "${GF_PATHS_PLUGINS:=/data/grafana/plugins}"
 : "${GF_PATHS_PROVISIONING:=/etc/grafana/provisioning}"
+
+mv -i /data/grafana/plugins/  $GF_PATHS_PLUGINS/
+
 
 chown -R grafana:grafana "$GF_PATHS_DATA" "$GF_PATHS_LOGS"
 
@@ -37,7 +40,7 @@ if [ ! -z "${GF_INSTALL_PLUGINS}" ]; then
   IFS=','
   for plugin in ${GF_INSTALL_PLUGINS}; do
     IFS=$OLDIFS
-    gosu grafana grafana-cli --pluginsDir "${GF_PATHS_PLUGINS}" plugins install ${plugin}
+    gosu grafana grafana-cli --pluginsDir "$GF_PATHS_PLUGINS" plugins install ${plugin}
   done
 fi
 

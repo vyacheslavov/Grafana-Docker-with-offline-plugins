@@ -1,28 +1,230 @@
-    1  docker ps
-    2  docker ps -a
-    3  cd grafana-docker/
-    4  vim run.sh 
-    5  docker image rm  grafana/grafana:master
-    6  docker rm grafana_cont 
-    7  docker image rm  grafana/grafana:master
-    8  docker image rm  grafana/grafana:latest
-    9  docker image ls
-   10  docker image rm -r *
-   11  docker image rm  *
-   12  docker image rm  docker image ls
-   13  docker rm $(docker ps -a -q)
-   14  docker rmi $(docker images -q)
-   15  docker images ls
-   16  bash build.sh 
-   17  docker ps
-   18  docker ps -a
-   19  docker image ls
-   20  docker run -d -p 3000:3000 --name=grafana_cont  -e "GF_INSTALL_PLUGINS=foursquare-clouderamanager-datasource" grafana/grafana:master
-   21  docker exec -it grafana_cont bash
-   22  docker ps -a
-   23  docker exec -it grafana_cont bash grafana-cli plugins ls
-   24  docker ps -a
-   25  docker exec -it grafana_cont bash 
-   26  docker ps -a
-   27  docker ps 
-   28  history > history_for_print.txt
+    1  ls
+    2  cd temp/dockertest/
+    3  git push
+    4  git status
+    5  git commit -a
+    6  git add grafana-docker/
+    7  git 
+    8  git fetch
+    9  sudo git status
+   10  sudo git commit -a
+   11  git push
+   12  sudo git push
+   13  sudo git pull
+   14  sudo -s
+   15  docker ps -a
+   16  docker ps 
+   17  docker image 
+   18  docker image ls
+   19  cd grafana-docker/
+   20  bash build.sh 
+   21  ping google.com
+   22  ping https://google.com
+   23  ping google.com
+   24  bash run.sh 
+   25  ls
+   26  vim start_container.sh 
+   27  docker run   -d   -p 3000:3000   --name=grafana   -e "GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-simple-json-datasource"   grafana/grafana
+   28  docker run   -d   -p 3000:3000   --name=grafana_cont   -e "GF_INSTALL_PLUGINS=foursquare-clouderamanager-datasource"   grafana/grafana
+   29  docker exec -it b79
+   30  docker exec -it b79 bash
+   31  docker ps -a
+   32  docker exec -it grafana_cont bash
+   33  docker stop grafana
+   34  docker rm grafana
+   35  docker stop grafana_cont
+   36  docker rm grafana_cont
+   37  docker run   -d   -p 3000:3000   --name=grafana_cont   -e "GF_INSTALL_PLUGINS=foursquare-clouderamanager-datasource"   grafana/grafana
+   38  docker exec -it grafana_cont bash
+   39  grafana cli 
+   40  docker exec -it grafana_cont bash
+   41  docker ps a
+   42  docker ps -a
+   43  docker ps 
+   44  docker run -it grafana_cont bash
+   45  docker stop grafana_cont
+   46  docker rm grafana_cont
+   47  docker run   -d   -p 3000:3000   --name=grafana_cont   -e "GF_INSTALL_PLUGINS=foursquare-clouderamanager-datasource"   grafana/grafana
+   48  docker image ls
+   49  docker image rm f21
+   50  docker stop grafana_cont
+   51  docker rm grafana_cont
+   52  docker image ls
+   53  docker image rm 6c2
+   54  bash build.sh 
+   55  docker image ls
+   56  docker run   -d   -p 3000:3000   --name=grafana_cont   -e "GF_INSTALL_PLUGINS=foursquare-clouderamanager-datasource"   grafana/grafana:master
+   57  docker ps -a
+   58  docker exec grafana_cont bash grafana-cli plugins ls
+   59  docker ps -a
+   60  vim run.sh 
+   61  docker start grafana_cont 
+   62  docker exec grafana_cont bash grafana-cli plugins ls
+   63  docker exec -it
+   64  docker exec -it bash
+   65  docker exec grafana_cont -it bash
+   66  docker start grafana_cont 
+   67  docker exec grafana_cont -it bash
+   68  docker exec grafana_cont bash grafana-cli plugins ls
+   69  docker start grafana_cont 
+   70  docker exec grafana_cont bash grafana-cli plugins ls
+   71  docker start grafana_cont 
+   72  docker exec -it grafana_cont  bash
+   73  docker start grafana_cont 
+   74  docker exec -it grafana_cont  bash
+   75  sudo -s
+   76  docker ps -a
+   77  ls
+   78  cd temp/
+   79  ls
+   80  cd dockertest/
+   81  ls
+   82  sudo docker save -o testimage.tar grafana/grafana:master
+   83  git add testimage.tar 
+   84  git commit
+   85  git push
+   86  git pull
+   87  git push
+   88  vim start_container.sh 
+   89  vim build.sh 
+   90  ls /data/docker/grafana/plugins/
+   91  cd /data/docker/grafana/plugins/
+   92  ls
+   93  cd .
+   94  cd -
+   95  cd :
+   96  cd #
+   97  cd ^
+   98  cd temp/dockertest/
+   99  ls
+  100  vim Dockerfile 
+  101  bash build.sh 
+  102  bash build.sh datasource-plugin-clouderamanager
+  103  ls /data/docker/grafana/plugins/
+  104  bash build.sh foursquare-clouderamanager-datasource
+  105  ls /data/docker/grafana/plugins/
+  106  ls /data/docker/grafana/plugins/ -a
+  107  /mnt/
+  108  ls /mnt/
+  109  sudo ls /mnt/
+  110  sudo ls /mnt/ -a
+  111  sudo ls /media/ -a
+  112  cd /media/sf_Personal/ -a
+  113  ls
+  114  mkdir grafana
+  115  cp -r /home/sva/temp/dockertest/ .
+  116  ls
+  117  mv -r dockertest/ grafana/
+  118  mv -i dockertest/ grafana/
+  119  ls grafana/
+  120  shutdown
+  121  sudo -s
+  122  cd /media/sf_Personal/grafana
+  123  sudo cd /media/sf_Personal/grafana
+  124  docker image rm 
+  125  docker image rm grafana/grafana:master 
+  126  docker load -i temp/dockertest/testimage.tar 
+  127  cd temp/dockertest/
+  128  mv testimage.tar ../
+  129  ls
+  130  vim start_container.sh 
+  131  bash start_container.sh 
+  132  docker rm -r $(docker ps -a -q)
+  133  docker rm  $(docker ps -a -q)
+  134  bash start_container.sh 
+  135  vim start_container.sh 
+  136  bash start_container.sh 
+  137  docker rm  $(docker ps -a -q)
+  138  bash start_container.sh 
+  139  docker rm  $(docker ps -a -q)
+  140  bash start_container.sh 
+  141  docker rm  $(docker ps -a -q)
+  142  bash build.sh foursquare-clouderamanager-datasource
+  143  docker images rm grafana/grafana:master
+  144  docker images rm grafana/grafana
+  145  docker image rm grafana/grafana:master
+  146  bash build.sh foursquare-clouderamanager-datasource
+  147  ls /data/docker/grafana/plugins/
+  148  bash start_container.sh 
+  149  vim run.sh 
+  150  vim start_container.sh 
+  151  bash start_container.sh 
+  152  docker rm  $(docker ps -a -q)
+  153  bash start_container.sh 
+  154  vim run.sh 
+  155  vim start_container.sh 
+  156  bash start_container.sh 
+  157  vim build.sh 
+  158  vim Dockerfile 
+  159  docker rm  $(docker ps -a -q)
+  160  docker image rm grafana/grafana:master
+  161  bash build.sh foursquare-clouderamanager-datasource
+  162  docker image rm grafana/grafana:master
+  163  bash build.sh foursquare-clouderamanager-datasource
+  164  vim start_container.sh 
+  165  vim run.sh 
+  166  docker image rm grafana/grafana:master
+  167  bash build.sh foursquare-clouderamanager-datasource
+  168  bash start_container.sh 
+  169  vim run.sh 
+  170  docker image rm grafana/grafana:master
+  171  docker image rm -f grafana/grafana:master
+  172  docker rm  $(docker ps -a -q)
+  173  bash build.sh foursquare-clouderamanager-datasource
+  174  bash start_container.sh 
+  175  docker rm  $(docker ps -a -q)
+  176  bash start_container.sh foursquare-clouderamanager-datasource
+  177  vim start_container.sh 
+  178  docker rm  $(docker ps -a -q)
+  179  bash start_container.sh 
+  180  docker rm  $(docker ps -a -q)
+  181  bash start_container.sh 
+  182  vim run.sh 
+  183  docker rm  $(docker ps -a -q)
+  184  docker image rm -f grafana/grafana:master
+  185* 
+  186  bash start_container.sh 
+  187  vim run.sh 
+  188  vim start_container.sh 
+  189  bash start_container.sh 
+  190  docker rm  $(docker ps -a -q)
+  191  docker image rm -f grafana/grafana:master
+  192  bash start_container.sh 
+  193  bash build.sh foursquare-clouderamanager-datasource
+  194  vim run.sh 
+  195  vim start_container.sh 
+  196  bash start_container.sh 
+  197  docker rm  $(docker ps -a -q)
+  198  vim start_container.sh 
+  199  bash start_container.sh 
+  200  docker exec -it f19
+  201  docker exec -it f19 bash
+  202  vim run.sh 
+  203  docker rm  $(docker ps -a -q)
+  204  docker rm -f  $(docker ps -a -q)
+  205  docker image rm -f grafana/grafana:master
+  206  bash build.sh foursquare-clouderamanager-datasource
+  207  bash start_container.sh 
+  208  docker exec -it f19 bash
+  209  docker exec -it 4aa bash
+  210  vim build.sh 
+  211  vim Dockerfile 
+  212  docker image rm -f grafana/grafana:master
+  213  docker rm -f  $(docker ps -a -q)
+  214  docker image rm -f grafana/grafana:master
+  215  bash build.sh foursquare-clouderamanager-datasource
+  216  bash start_container.sh 
+  217  docker exec -it 9c8 bash
+  218  docker rm -f  $(docker ps -a -q)
+  219  docker image rm -f grafana/grafana:master
+  220  vim run.sh 
+  221  bash build.sh foursquare-clouderamanager-datasource
+  222  bash start_container.sh 
+  223  docker exec -it ddc bash
+  224  vim run.sh 
+  225  docker rm -f  $(docker ps -a -q)
+  226  docker image rm -f grafana/grafana:master
+  227  bash build.sh foursquare-clouderamanager-datasource
+  228  bash start_container.sh 
+  229  docker exec -it 83b bash
+  230  history > history_for_print.txt 

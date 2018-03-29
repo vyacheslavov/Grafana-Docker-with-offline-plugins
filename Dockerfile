@@ -11,3 +11,8 @@ ARG GF_RUN_PLUGINS
 RUN mkdir -p /data/grafana/plugins && chown -R grafana:grafana /data/grafana/plugins
 #RUN grafana-cli --pluginsDir "/data/grafana/plugins" plugins install ${GF_INSTALL_PLUGINS}
 RUN ${GF_RUN_PLUGINS}
+RUN ls -a /data/grafana/plugins
+COPY ./run.sh /run.sh
+WORKDIR /
+ENTRYPOINT ["/run.sh"]
+
