@@ -33,7 +33,9 @@ bash build.sh foursquare-clouderamanager-datasource,grafana-simple-json-datasour
 
 ## Running container with offline plugins
 
-Pass the plugins you want installed to docker with the `GF_INSTALL_PLUGINS` environment variable as a comma seperated list. Here you can select the plugins to be installed into container. You can install only those plugins that were downloaded during building process.
+~~Pass the plugins you want installed to docker with the `GF_INSTALL_PLUGINS` environment variable as a comma seperated list. Here you can select the plugins to be installed into container. You can install only those plugins that were downloaded during building process.~~
+
+You do not need to specify the plugins again during starting of the container from the built image. Only if you want to download (e.g. you will need Internet access) additional plugins or update already downloaded ones, you can do it by passing them through the `GF_INSTALL_PLUGINS` environment variable as a comma separated list.
 
 Also, make sure to specify the image tag. If you did not pass the tag argument during the building process, use the default tag – "master". Here is example command:
 
@@ -42,8 +44,13 @@ docker run \
   -d \
   -p 3000:3000 \
   --name=grafana \
-  -e "GF_INSTALL_PLUGINS=foursquare-clouderamanager-datasource" 
   grafana/grafana:master
+```
+
+This code is available as a bash script in this repo:
+
+```
+bash start_container.sh
 ```
 
 ## Grafana container with persistent storage (recommended)
