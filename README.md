@@ -14,21 +14,18 @@ By default (without any input arguments) the script builds an image with Grafana
 
 ```
 bash build.sh
-
 ```
 
 The example of input input arguments (Antonios, use this one):
 
 ```
 bash build.sh foursquare-clouderamanager-datasource master latest
-
 ```
 
 You can define the list of plugins separating them by comma without spaces. For example: 
 
 ```
 bash build.sh foursquare-clouderamanager-datasource,grafana-simple-json-datasource master latest
-
 ```
 
 ## Running container with offline plugins
@@ -47,7 +44,7 @@ docker run \
   grafana/grafana:master
 ```
 
-This code is available as a bash script in this repo:
+This command is available as a bash script in this repo:
 
 ```
 bash start_container.sh
