@@ -28,6 +28,13 @@ You can define the list of plugins separating them by comma without spaces. For 
 bash build.sh foursquare-clouderamanager-datasource,grafana-simple-json-datasource master latest
 ```
 
+In order to check whether the plugins are correctly installed in the container do:
+```
+docker exec -it grafana bash
+grafana-cli plugins ls
+```
+See the list of plugins and exit container by entering ```exit```
+
 ## Running container with offline plugins
 
 ~~Pass the plugins you want installed to docker with the `GF_INSTALL_PLUGINS` environment variable as a comma seperated list. Here you can select the plugins to be installed into container. You can install only those plugins that were downloaded during building process.~~
